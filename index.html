@@ -14,7 +14,7 @@
     nightDayHandler(this);
   ">
   <ol id="nav">
-    
+
   </ol>
   <article>
 
@@ -34,7 +34,17 @@
     }
     fetch('list').then(function(response){
             response.text().then(function(text){
-                document.querySelector('#nav').innerHTML = text;
+              console.log(text);
+              var items = text.split(',');
+              var tag = '<li>' + item + '</li>';
+              console.log(items);
+              var i = 0; 
+              while(i<items.length) {
+                var item = items[i];
+                console.log(item);
+                i = i + 1;
+              }
+              document.querySelector('#nav').innerHTML = text;
             });
         });
   </script>
