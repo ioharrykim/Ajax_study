@@ -13,8 +13,11 @@
         // });
 
         // Asynchronous (비동기)
-        fetch('html').then(function(response){
-            console.log(response);
+        fetch('JavaScript').then(function(response){
+            console.log(response.status);
+            if(response.status == '404') {
+                alert('404 Not Found');
+            }
         });
         console.log(1);
         console.log(2);
